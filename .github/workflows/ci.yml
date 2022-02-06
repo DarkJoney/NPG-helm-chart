@@ -19,3 +19,10 @@ jobs:
       - name: Lint chart
         run: helm lint
         working-directory: ./
+      - name: Merge
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: staging
+          target_branch: master
+          github_token: ${{ github.token }}
