@@ -1,0 +1,10 @@
+apiVersion: v2
+name: prom-grafana
+version: "0.1"
+appversion: "1.0"
+description: Deploys nginx, prometheus and grafana with automated monitoring configuration for asffero
+
+dependencies:
+- name: nginx
+  version: "1.2.3"
+  repository: "file://../charts/nginx"
