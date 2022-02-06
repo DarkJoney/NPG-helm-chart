@@ -19,8 +19,8 @@ jobs:
       - name: Lint chart
         run: helm lint
         working-directory: ./
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
       - name: Merge me!
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         uses: ridedott/merge-me-action@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
