@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Lint chart
-        run: helm lint nginx
+        run: helm lint
         working-directory: /
