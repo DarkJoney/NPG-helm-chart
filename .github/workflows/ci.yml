@@ -1,0 +1,19 @@
+
+name: CI
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    paths:
+      - ci/**
+      - .github/workflows/**
+      - action.yml
+  workflow_dispatch:
+jobs:
+  helm:
+    name: Helm
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Lint chart
+        run: helm lint nginx
+        working-directory: /
