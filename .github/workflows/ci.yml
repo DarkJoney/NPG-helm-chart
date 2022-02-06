@@ -14,9 +14,6 @@ jobs:
     name: Helm
     runs-on: ubuntu-20.04
     steps:
-      - name: ugh
-        run: ls -l
-        working-directory: ./
       - name: Lint chart
         run: helm lint
-        working-directory: ./
+        working-directory:
