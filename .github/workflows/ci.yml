@@ -14,6 +14,8 @@ jobs:
     name: Helm
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout sources
+        uses: actions/checkout@main
       - name: Lint chart
         run: helm lint
-        working-directory:
+        working-directory: ./
