@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Lint chart
         run: helm lint
-        working-directory: /
+        working-directory: ./
